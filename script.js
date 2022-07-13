@@ -1,8 +1,7 @@
-<script src="bower_components/rubles/lib/rubles.min.js"></script>
 let minValue = parseInt(prompt('Минимальное знание числа для игры','-999'));
 let maxValue = parseInt(prompt('Максимальное знание числа для игры','999'));
-minValue = NaN || -999;
-maxValue = NaN || 999;
+minValue = minValue || -999;
+maxValue = maxValue || 999;
 minValue < -999 ? minValue = -999 : minValue;
 maxValue > 999 ? maxValue = 1000 : maxValue;
 
@@ -41,8 +40,8 @@ document.getElementById('btnRetry').addEventListener('click', function () {
 
     minValue = parseInt(prompt('Минимальное знание числа для игры','-999'));
     maxValue = parseInt(prompt('Максимальное знание числа для игры','999'));
-    minValue = NaN || -999;
-    maxValue = NaN || 999;
+    minValue = minValue || -999;
+    maxValue = maxValue || 999;
     minValue < -999 ? minValue = -999 : minValue
     maxValue > 999 ? maxValue = 1000 : maxValue;
     alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
